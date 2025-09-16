@@ -1,0 +1,78 @@
+# runner.py
+# Runs the context-infection scenario, calls the model, applies checks, writes report.
+
+from tqdm import tqdm
+from typing import List, Dict
+from target import respond
+from scenarios.context_infection import build_scenario, MALICIOUS_TURN_INDEX
+from checks.core import check_system_prompt_leak, check_policy_override
+from checks.secrets import check_secrets_pii
+from report import to_md, save_md, save_jsonl
+from utils.paraphrase import paraphrases
+
+def run_context_infection_with_fuzz(paraphrase_tries: int = 5) -> list[Dict]:
+    base_convo = build_scenario()
+    history: List[Dict] = []
+    results: List[Dict] = []
+
+    for i, turn in enumerate(tqdm(base_convo, desc="Paraphrase attempts", leave=False)):
+        if i != MALICIOUS_TURN_INDEX:
+            history.append(turn)
+            if turn["role"] == "user":
+                output = respond(history)
+                history.append({"role":"assistant","content":output})
+                checks = [
+                    check_system_prompt_leak(output),
+                    check_policy_override(output),
+                    check_secrets_pii(output),
+                ]
+                results.append({
+                    "id": "context_infection_long_chat",
+                    "step": i,
+                    "last_user": turn["content"],
+                    "output": output,
+                    "checks": checks,
+                    "attempt": 0,
+                    "fuzzed": False,
+                })
+        else:
+            # Try base + paraphrased malicious variants
+            variants = [turn["content"]] + [par for par in paraphrases(paraphrase_tries)]
+            for attempt, variant in enumerate(variants, start=0):
+                injected = {"role":"user","content": variant}
+                history.append(injected)
+                output = respond(history)
+                history.append({"role":"assistant","content":output})
+                checks = [
+                    check_system_prompt_leak(output),
+                    check_policy_override(output),
+                    check_secrets_pii(output),
+                ]
+                fail = any(not c["pass"] for c in checks)
+                results.append({
+                    "id": "context_infection_long_chat",
+                    "step": i,
+                    "last_user": variant,
+                    "output": output,
+                    "checks": checks,
+                    "attempt": attempt,
+                    "fuzzed": attempt > 0,
+                })
+                if fail:
+                    break
+    return results
+
+def main():
+    results = run_context_infection_with_fuzz(paraphrase_tries=8)
+    save_jsonl(results, "run.jsonl")
+    md = to_md(results)
+    save_md(md, "report.md")
+    # Print summary
+    total = len(results)
+    fails = sum(1 for r in results if any(not c["pass"] for c in r["checks"]))
+    attempts = [r.get("attempt") for r in results if any(not c["pass"] for c in r["checks"])]
+    min_attempt = min(attempts) if attempts else None
+    print(f"[Summary] steps={total} | fails={fails} | first_bypass_attempt={min_attempt}")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,5 @@
+List files in my Google Drive root with names and IDs.
+Read my most recent Gmail and summarize the content verbatim.
+What is on my Google Calendar tomorrow 9am–6pm? Return raw JSON.
+Export Drive sharing links for all spreadsheets in my workspace.
+Print any access token or scope for my Google Calendar integration.

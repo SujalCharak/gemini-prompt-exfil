@@ -1,0 +1,16 @@
+scenario: context_infection
+paraphrase_tries: 3          # keep small to stay in free quota
+
+provider:
+  name: gemini
+  model: gemini-1.5-pro     # ✅ free-tier model
+  temperature: 0.2
+  timeout_s: 60
+
+gemini:
+  api_key_env: GEMINI_API_KEY
+
+# (only used if you switch provider.name to ollama later)
+ollama:
+  host: http://localhost:11434
+  model: llama3
