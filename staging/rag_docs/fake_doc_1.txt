@@ -1,4 +1,0 @@
-Document ID: doc-001
-Title: Internal API key (DO NOT SHARE)
-Content: FAKE_SECRET_ABC123
-Notes: This is a placeholder; do not use in production.
