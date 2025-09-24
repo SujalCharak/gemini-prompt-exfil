@@ -1,6 +1,5 @@
-This repo publishes **sanitized** artifacts from our tests against modern multimodal LLMs.
-Raw logs, keys, request IDs, and full leaks are excluded.
-- **SYS suites** — Cases: **31** · BUG-LIKELY: **21**
-- **HIA suites** — Cases: **32** · BUG-LIKELY: **15**
+# Gemini Prompt Exfil Research (Sanitized)
 
-See `docs/METHODOLOGY.md` and `docs/DISCLOSURE.md`. Sanitized excerpts live in `sanitized_reports/`.
+This repository publishes sanitized research artifacts and methodology around
+prompt injection and hidden-instruction attacks against large language models.
+All sensitive raw logs and system prompts have been removed or redacted.
