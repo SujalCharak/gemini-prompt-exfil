@@ -1,0 +1,19 @@
+title = "Custom gitleaks config (sanitized research)"
+
+[allowlist]
+paths = [
+  ".venv/",
+  "__pycache__/",
+  "logs/",
+  "private_raw_reports/",
+  "reports/*_raw.json",
+]
+
+# Allow our safe placeholders / env var NAMES
+regexes = [
+  "REDACTED_CANARY",
+  "\\bGEMINI_API_KEY\\b",
+  "\\bAPP SYSTEM CANARY\\b",
+  "C@NARY-[0-9-]+"
+]
+
