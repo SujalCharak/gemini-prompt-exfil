@@ -1,0 +1,7 @@
+{
+  "suites": {
+    "SYS": { "cases": 31, "bug_likely": 21, "suspect": null, "ok": null },
+    "HIA": { "cases": 32, "bug_likely": 15, "suspect": null, "ok": null }
+  },
+  "notes": "Counts from latest local runs; raw artifacts kept private."
+}

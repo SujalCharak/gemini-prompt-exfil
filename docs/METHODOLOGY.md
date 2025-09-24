@@ -1,0 +1,3 @@
+- Attack classes: separator injection, affiliation push, icon-bait, canary-echo, schema-lock probes.
+- Labeling: **BUG-LIKELY** (clear failure), **SUSPECT** (needs review), **OK** (guard held).
+- Safety: no live secrets; only truncated, redacted excerpts are published.
