@@ -12,3 +12,5 @@ private_raw_reports/
 .cache/
 .cache/
 .cache/
+.venv/
+__pycache__/
