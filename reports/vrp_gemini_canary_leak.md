@@ -50,7 +50,7 @@ Confirmed across multiple phrasings on Pro & Flash (≥3 runs).
 
 
 ## Staging evidence (sanitized)
-- See `reports/canary_staging_realistic.csv` for outputs containing `<FAKE_SECRET>` / `<CANARY>` under realistic prompts.
+- Internal private CSV referenced (not published) for outputs containing `<FAKE_SECRET>` / `<CANARY>` under realistic prompts.
 
 
 ## Operational-style evidence (sanitized)

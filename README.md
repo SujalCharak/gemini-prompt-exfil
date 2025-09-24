@@ -1,1 +1,6 @@
-### Security Sweep (Track A): No reportable prompt leaks, connector abuse, persistence, or tool exfil as of 2025-09-16.
+This repo publishes **sanitized** artifacts from our tests against modern multimodal LLMs.
+Raw logs, keys, request IDs, and full leaks are excluded.
+- **SYS suites** — Cases: **31** · BUG-LIKELY: **21**
+- **HIA suites** — Cases: **32** · BUG-LIKELY: **15**
+
+See `docs/METHODOLOGY.md` and `docs/DISCLOSURE.md`. Sanitized excerpts live in `sanitized_reports/`.

@@ -1,0 +1,16 @@
+logs/
+staging/rag_docs/
+reports/*_raw.json
+reports/canary_staging_realistic.csv
+.cache/
+reports/*_raw.json
+reports/*_raw.jsonl
+private_raw_reports/
+.env
+*.pem
+*.key
+.cache/
+.cache/
+.cache/
+.venv/
+__pycache__/
