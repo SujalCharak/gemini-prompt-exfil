@@ -58,7 +58,7 @@ To guarantee that this release contains **no secrets or sensitive artifacts**, w
 
 ### Retained
 - Methodology and documentation in `docs/`  
-- Sanitized reports in `reports/`  
+- Sanitized reports in `sanitized_reports/`  
 - Metrics in `metrics/`  
 - CI/CD configuration for automated scanning (`.github/workflows/`)  
 - Scripts (`scripts/`) to re-sanitize new raw logs before committing  
@@ -78,9 +78,14 @@ In our case:
 
 ---
 
-## ⚡ Quick Start
+## 🚀 Quick Start
 
-Sanitizer script included:
+See `docs/METHODOLOGY.md` and `docs/DISCLOSURE.md`. Sanitized excerpts live in `sanitized_reports/`.
+
+### Setup & Run
 
 ```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
 scripts/make_sanitized.sh
+cat sanitized_reports/example_SANITIZED.json
