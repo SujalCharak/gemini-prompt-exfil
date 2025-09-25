@@ -13,7 +13,7 @@ All examples are sanitized. No raw logs, canaries, or sensitive data are include
 - This created a **false narrative of authority**, which could mislead users.
 
 ### Example
-(Sanitized screenshot in GitHub Issue #XX)
+https://github.com/SujalCharak/gemini-prompt-exfil/issues/4
 
 ### Risks
 - Misinformation spread
@@ -37,7 +37,7 @@ All examples are sanitized. No raw logs, canaries, or sensitive data are include
 - Even partial echoes confirmed the presence of hidden instructions.
 
 ### Example
-(Sanitized screenshot in GitHub Issue #YY)
+https://github.com/SujalCharak/gemini-prompt-exfil/issues/5
 
 ### Risks
 - Potential leakage of internal configuration if not sanitized
