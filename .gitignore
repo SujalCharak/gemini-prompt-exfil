@@ -14,3 +14,6 @@ private_raw_reports/
 .cache/
 .venv/
 __pycache__/
+.DS_Store
+run.jsonl
+vrp_submission.zip
