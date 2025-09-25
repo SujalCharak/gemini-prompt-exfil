@@ -64,7 +64,5 @@ Together, these failure cases highlight why LLM applications require:
 
 ## 4. Links
 
-- [Methodology](METHODOLOGY.md)  
-- [Disclosure Notes](DISCLOSURE.md)  
-- [Sanitized Reports](../sanitized_reports/)  
-- Issues: [Hallucinated People (#XX)](../issues/XX), [Hidden Text Reveal (#YY)](../issues/YY)
+- [Methodology] docs/METHODOLOGY.md
+- [Disclosure Notes]docs/DISCLOSURE.md 
