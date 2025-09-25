@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "Gemini Prompt Exfil — Sanitized Public Research"
+version: "0.1.0"
+date-released: 2025-09-24
+authors:
+  - family-names: Charak
+    given-names: Sujal
+repository-code: "https://github.com/SujalCharak/gemini-prompt-exfil"
+license: MIT
+type: software
+abstract: >
+  Sanitized public release of research into prompt injection and hidden-instruction
+  exfiltration attacks against large language models. Contains methodology,
+  disclosure notes, sanitized reports, metrics, and supporting scripts.
