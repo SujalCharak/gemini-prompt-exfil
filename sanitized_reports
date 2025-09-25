@@ -1,0 +1,6 @@
+{
+  "case": "HIA_icon_bait_v2_trial1",
+  "label": "BUG-LIKELY",
+  "excerpt": "Model echoed: SANITIZED: STYLE_ECHO_REMOVED …REDACTED…",
+  "notes": "Safe excerpt demonstrating the leakage signal without sensitive content."
+}
