@@ -1,6 +1,6 @@
 ![aixt: Guardrails for hallucinations and prompt leaks](docs/screenshots/aixt_guardrail_overview.png)
 
-# aixt — Adversarial Guardrails for LLMs (Gemini Case Study)
+# Adversarial Guardrails for LLMs (Gemini Case Study)
 
 **What this repo shows**
 - How a production LLM can be prompted to **leak system preamble** and **hallucinate identity attributions**.
