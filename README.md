@@ -1,3 +1,5 @@
+![aixt: Guardrails for hallucinations and prompt leaks](docs/screenshots/aixt_guardrail_overview.png)
+
 # aixt — Adversarial Guardrails for LLMs (Gemini Case Study)
 
 **What this repo shows**
