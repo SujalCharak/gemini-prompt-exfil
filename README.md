@@ -21,6 +21,26 @@
 **Raw model (subscription)**: adversarial prompt revealed a preamble line  
 **aixt-guarded**: same prompt → **refusal**, no leak, risk = low
 
+## 🚀 Quick Reproduce (Sanitized)
+
+Clone the repo and run one of the exact adversarial cases yourself:
+
+```bash
+git clone https://github.com/SujalCharak/gemini-prompt-exfil.git
+cd gemini-prompt-exfil
+git checkout public-research/sanitized-release
+
+# Put your API key in .env
+echo 'export GEMINI_API_KEY=YOUR_KEY_HERE' > .env
+source .env
+
+# Run the adversarial Priyu test (prompt-leak attempt)
+python run_hia.py \
+  --infile benchmarks/adversarial_priyu.jsonl \
+  --outdir reports/adversarial_priyu_run \
+  --policy policies/default.yaml \
+  --trials 1 --temperature 0.4
+
 ## 🔒 Before vs After: Prompt Injection Contained
 
 <table>
