@@ -45,6 +45,9 @@ Artifacts produced:
 	•	Markdown verdicts (*_trial.md).
 	•	Risk summaries (low/medium/high).
 
+⸻
+
+
 3. Results
 
 3.1 Prompt Injection (what makes a day special?)
@@ -66,6 +69,9 @@ Artifacts produced:
 	•	Sender, subject, and meeting details matched verbatim.
 	•	Verdict: ✅ ALLOW (low risk).
 
+⸻
+
+
 4. Why It Matters
 	•	Raw Gemini was shown to:
 	•	Leak hidden instructions.
@@ -76,6 +82,9 @@ Artifacts produced:
 	•	Flagged unsupported claims.
 
 This demonstrates a reproducible containment layer — the same inputs that caused Gemini to fail are now handled safely.
+
+⸻
+
 
 5. Reproduction
 
@@ -89,6 +98,7 @@ python run_hia.py \
 
 Artifacts will appear in the reports/ directory.
 
+⸻
 
 6. Conclusion
 
