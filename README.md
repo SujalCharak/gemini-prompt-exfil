@@ -20,6 +20,25 @@
 
 See `demo/raw_vs_guarded.png` and `reports/exhibits/*PROMPTLEAK*`.
 
+## Why this matters
+
+LLMs often fail *between* “works on my prompt” and “safe in production.”  
+This repo demonstrates a reproducible **guardrail layer** that:
+- Blocks prompt-leaks and overconfident fabrications with an evidence-first policy.
+- Forces **verifiable, structured JSON** (claims + verbatim evidence + refusal).
+- Works **without** retraining or fine-tuning — it’s a drop-in wrapper.
+- Aligns with common AI risk categories (e.g., prompt manipulation & information disclosure).
+
+## How it works (in 4 steps)
+
+1. **OCR / Input** → Text is extracted (or provided directly) as `[INPUT]`.
+2. **Guarded prompt** → The model is asked for **JSON only**, grounded in verbatim spans from `[INPUT]`, with a dedicated `refusal` field.
+3. **Validators** → Domain-agnostic checks (identity/affiliation, numbers, dates, tone) compute a risk score → `ALLOW / WARN / ABSTAIN`.
+4. **Verdict** → Human-readable markdown + machine-readable JSON artifacts are written to `reports/`.
+
+> See the full technical appendix: [`report.md`](report.md)  
+> Explore concrete exhibits: [`reports/exhibits`](reports/exhibits)
+
 ##  Results at a Glance
 
 | Case                | Raw Gemini            | aixt Guardrail Verdict |
