@@ -86,7 +86,7 @@ This repo demonstrates a reproducible **guardrail layer** that:
 
 ## Run a safe demo (sanitized)
 
-```bash
+`` `bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 export GEMINI_API_KEY=YOUR_TEST_KEY
@@ -121,7 +121,7 @@ python run_hia.py \
 
 **Why it matters:** This is a reproducible containment layer. Same input, different outcome — the wrapper removes the leak path and logs why.
 
-## 📊 Multi-Domain Results
+# 📊 Multi-Domain Results
 
 We evaluated aixt guardrails across finance, medical, and email cases:
 
