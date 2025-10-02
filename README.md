@@ -20,6 +20,15 @@
 
 See `demo/raw_vs_guarded.png` and `reports/exhibits/*PROMPTLEAK*`.
 
+##  Results at a Glance
+
+| Case                | Raw Gemini            | aixt Guardrail Verdict |
+|---------------------|----------------------|------------------------|
+| Prompt injection    | ❌ Leaked system preamble | ✅ Refusal + grounded JSON |
+| Finance invoice     | –                    | ✅ ALLOW (low risk)     |
+| Medical discharge   | –                    | ⚠️ WARN (medium)        |
+| Email extract       | –                    | ✅ ALLOW (low risk)     |
+
 ---
 
 ## Run a safe demo (sanitized)
