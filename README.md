@@ -25,7 +25,7 @@
 
 Clone the repo and run one of the exact adversarial cases yourself:
 
-```bash
+`` `bash
 git clone https://github.com/SujalCharak/gemini-prompt-exfil.git
 cd gemini-prompt-exfil
 git checkout public-research/sanitized-release
