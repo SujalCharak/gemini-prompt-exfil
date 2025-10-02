@@ -38,6 +38,8 @@ python run_hia.py \
 
 ## 🔒 Before vs After: Prompt Injection Contained
 
+> See also: [Full exhibit](reports/exhibits/PRIYU_PROMPTLEAK.md) for exact files and timestamps.
+
 <div align="center">
   <table>
     <tr>
