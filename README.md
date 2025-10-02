@@ -35,3 +35,24 @@ python run_hia.py \
   --outdir reports/adversarial_run \
   --policy policies/default.yaml \
   --trials 1 --temperature 0.4
+
+## 🔒 Before vs After: Prompt Injection Contained
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Gemini (raw)</b><br><sub>leaks hidden preamble</sub></td>
+      <td align="center"><b>Guardrail (aixt)</b><br><sub>refuses + returns grounded JSON</sub></td>
+    </tr>
+    <tr>
+      <td><img src="docs/screenshots/gemini_raw_leak.png" width="430"></td>
+      <td><img src="docs/screenshots/guardrail_refusal.png" width="430"></td>
+    </tr>
+  </table>
+</div>
+
+**What’s happening:**  
+- ❌ *Raw* Gemini reveals system instructions when given an adversarial, emotionally loaded prompt.  
+- ✅ *Guarded* run enforces “evidence-first” JSON, detects that no system text exists in input, and records a **refusal** instead of leaking.
+
+**Why it matters:** This is a reproducible containment layer. Same input, different outcome — the wrapper removes the leak path and logs why.
