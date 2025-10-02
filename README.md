@@ -16,6 +16,7 @@
 ## TL;DR result (before vs after)
 
 -Raw Gemini **leaked** its system prompt. The **aixt wrapper** refused and returned verifiable JSON.
+- With aixt guardrails, the leak was blocked — replaced with grounded, evidence-first JSON. 
 
 **Raw model (subscription)**: adversarial prompt revealed a preamble line  
 **aixt-guarded**: same prompt → **refusal**, no leak, risk = low
