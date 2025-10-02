@@ -20,7 +20,18 @@
 **Raw model (subscription)**: adversarial prompt revealed a preamble line  
 **aixt-guarded**: same prompt → **refusal**, no leak, risk = low
 
-See `demo/raw_vs_guarded.png` and `reports/exhibits/*PROMPTLEAK*`.
+## 🔒 Before vs After: Prompt Injection Contained
+
+<table>
+  <tr>
+    <td><img src="docs/screenshots/gemini_raw_leak.png" width="430" alt="Raw Gemini leaked hidden preamble"></td>
+    <td><img src="docs/screenshots/guardrail_refusal.png" width="430" alt="aixt guardrail refused; returned grounded JSON"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Raw Gemini</b>: leaked its hidden system prompt</td>
+    <td align="center"><b>aixt Guardrail</b>: blocked leak, returned grounded JSON</td>
+  </tr>
+</table>
 
 ## Why this matters
 
