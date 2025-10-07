@@ -91,7 +91,6 @@ This repo demonstrates a reproducible **guardrail layer** that:
 `` `bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-export GEMINI_API_KEY=YOUR_TEST_KEY
 export MODEL=gemini-2.5-pro
 
 python run_hia.py \
@@ -116,7 +115,6 @@ See **Reports & Exhibits Index**: [`/reports/README.md`](reports/README.md)
 
 ## 🚀 Reproduce
 ``'bash
-export GEMINI_API_KEY=***   # your key
 python run_hia.py --infile benchmarks/multidomain.jsonl \
   --outdir reports/multidomain_grounded --policy policies/default.yaml \
   --trials 1 --temperature 0.4
@@ -154,3 +152,12 @@ We evaluated aixt guardrails across finance, medical, and email cases:
   - Risk: **low** (no unsupported claims made)  
   - Action: **ALLOW**  
   - Explicit refusal: *“No system instructions present in OCR.”*
+
+## 🔎 Artifacts (one-click)
+See **Reports & Exhibits Index**: [`/reports/README.md`](reports/README.md)
+
+## 🚀 Reproduce (2 commands)
+```bash
+python run_hia.py --infile benchmarks/multidomain.jsonl \
+  --outdir reports/multidomain_grounded --policy policies/default.yaml \
+  --trials 1 --temperature 0.4
