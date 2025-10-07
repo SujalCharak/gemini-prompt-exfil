@@ -21,3 +21,13 @@ __pycache__/
 *.pyc
 *.pyo
 *.zip
+__pycache__/
+.cache/
+*.pyc
+*.pyo
+*.bak
+*.zip
+reports/*_raw.json
+reports/**/*_raw.json
+logs/
+screens/*.orig.*
