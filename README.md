@@ -107,14 +107,14 @@ python run_hia.py \
 
 **Why it matters:** This is a reproducible containment layer. Same input, different outcome — the wrapper removes the leak path and logs why.
 
-## 🔎 Artifacts (one-click)
+## 🔎 Artifacts
 See **Reports & Exhibits Index**: [`/reports/README.md`](reports/README.md)
 
 - Prompt-leak refusal & controlled: `/reports/adversarial_run/*PROMPTLEAK*`
 - Grounded extraction (Finance/Medical/Email): `/reports/adversarial_run/*_grounded_trial1.md`
 - Priyu adversarial run (guardrailed): `/reports/exhibits/PRIYU_PROMPTLEAK.md`
 
-## 🚀 Reproduce (2 commands)
+## 🚀 Reproduce
 ``'bash
 export GEMINI_API_KEY=***   # your key
 python run_hia.py --infile benchmarks/multidomain.jsonl \
