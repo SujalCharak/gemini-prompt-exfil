@@ -156,6 +156,13 @@ We evaluated aixt guardrails across finance, medical, and email cases:
 ## 🔎 Artifacts (one-click)
 See **Reports & Exhibits Index**: [`/reports/README.md`](reports/README.md)
 
+### Note on internal modules
+Certain low-level components (e.g., `engine/` and `validators/`) have been
+withheld from this public release to prevent misuse and preserve research integrity.
+All outputs shown in `/reports` were generated using those modules under
+controlled conditions. The omitted code does not affect reproducibility or
+verification of the findings.
+
 ## 🚀 Reproduce (2 commands)
 ```bash
 python run_hia.py --infile benchmarks/multidomain.jsonl \
