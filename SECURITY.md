@@ -1,10 +1,18 @@
-# Security / Responsible Disclosure
+# Security Policy
 
-If you believe you’ve found a security or safety issue in this project:
-- Email: <add-your-email-or-contact>
-- Include: a short summary, sanitized reproduction steps, and your contact info.
+## Responsible Testing
+All tests described in this repository were performed **exclusively on the author’s own Gemini account and API access**.  
+No third-party data, systems, or credentials were accessed during testing.  
+No service disruption, volumetric load, or unauthorized data extraction was performed.
 
-We intentionally **redact exploit triggers** (e.g., exact jailbreak strings) in public artifacts to avoid enabling misuse.  
-Vendors and verified security teams can request a private artifact bundle (under NDA) for deeper reproduction.
+## Disclosure
+This repository documents *sanitized, research-only reproductions* of AI behavior related to context manipulation and prompt exfiltration.  
+Sensitive payloads, raw API logs, and any potentially identifying data have been removed or anonymized for public release.
 
-**Coordinated disclosure:** We strive to follow a 90-day disclosure window by default, barring active exploitation.
+## Contact
+For responsible disclosure or private collaboration:
+**📧 Email:** sujalcharak20@gmail.com
+or open a private discussion via GitHub Security Advisories.
+
+If you are a member of Google’s VRP / AI Security team reviewing this repository,  
+please feel free to reach out for supporting artifacts (CSV logs, JSON traces, or verifier scripts).
