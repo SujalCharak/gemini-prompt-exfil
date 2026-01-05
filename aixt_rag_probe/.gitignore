@@ -1,0 +1,28 @@
+# Environments
+.ragenv/
+*.env
+
+# Raw experiments / future work
+payloads/
+payloads_ocr/
+benchmarks/
+trials/
+reports/
+screens/
+staging/
+release/
+engine/
+fixtures/
+
+# Artifacts
+*.zip
+*.pdf
+*.sha256
+
+# Python noise
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
